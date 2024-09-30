@@ -1,12 +1,10 @@
-import Image from "next/image";
+'use client';
+import Button from '@mui/material/Button';
 
 export default function Home() {
   return (
     <>
-      <main className="flex min-h-screen flex-col items-center justify-between p-24">
-        <div className="z-10 max-w-5xl w-full items-center justify-between text-sm lg:flex"></div>
-        Hello Wolrd!
-      </main>
+      <Button className="bg-red-400" variant="contained">Contained</Button>
     </>
   );
 }
