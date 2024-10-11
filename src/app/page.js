@@ -29,7 +29,7 @@ const useTodoStatus = () => {
       content: newContent,
       regDate: dateToStr(new Date()),
     };
-    setTodos((todos) => [...todos, newTodo]);
+    setTodos((todos) => [ newTodo, ...todos]);
   };
   const removeTodo = (id) => {
     const newTodos = todos.filter((todo) => todo.id != id);
@@ -153,6 +153,8 @@ const App = () => {
 
   React.useEffect(() => {
     todosState.addTodo('스쿼트');
+    todosState.addTodo('스쿼트2');
+    todosState.addTodo('스쿼트3');
   }, []);
 
   const onSubmit = (e) => {
